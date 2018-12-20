@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'BlackFriday/my.css' %}">
+
+    <title>Data Mining</title>
+</head>
+<body>
+
+    <header class="site-header">
+{#      <nav id="nav1" class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">#}
+{#        <div class="container">#}
+{#             <a class="navbar-brand mr-4" href="{% url 'home_page' %}">Project Proposal</a>#}
+{#          <a class="navbar-brand mr-4" href="{% url 'home' %}">Result Page</a>#}
+{##}
+{#          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">#}
+{#          <span class="navbar-toggler-icon"></span>#}
+{#          </button>#}
+{##}
+{##}
+{##}
+{#          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">#}
+{#          <span class="navbar-toggler-icon"></span>#}
+{#          </button>#}
+{#          <div class="collapse navbar-collapse" id="navbarToggle">#}
+{#            <div class="navbar-nav mr-auto">#}
+{#                <!-- url 'blog-home -> we take this name from urls.py where we defined name for every view '-->#}
+{#              <a class="nav-item nav-link" href="{%  url 'home_view' %}">Prediction Form</a>#}
+{#              <a class="nav-item nav-link" href="#">About</a>#}
+{#            </div>#}
+{#            <!-- Navbar Right Side -->#}
+{#            <div class="navbar-nav">#}
+{#                <a class="nav-item nav-link" href="#">Log Out</a>#}
+{#                <a class="nav-item nav-link" href="#">Profile</a>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </nav>#}
+
+    </header>
+
+<div id="maindiv">
+    <div class="container1">
+    <main role="main" class="container">
+    <h2>Your prediction will be hear:</h2>
+      <div class="row">
+      <div class = "col-md-8">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+          {% block content %}{% endblock %}
+      </div>
+      <style>
+          .alert.alert-success{
+              background-color:white ;
+              color: black;
+          }
+
+          .alert.alert-info{
+              background-color:white ;
+              color: black;
+          }
+          .navbar.navbar-expand-md.navbar-dark.bg-steel.fixed-top{
+              background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwixkJ_HnavfAhVGEiwKHaldDtwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbackground%2F&psig=AOvVaw1shGMEbCXmSyoY7EDAlQvI&ust=1545286121406296");
+              text-align: center;
+              background-repeat: no-repeat;
+              background-size: 100%;
+
+
+
+
+          }
+          nav.navbar.navbar-expand-md.navbar-dark.bg-steel.fixed-top{
+              text-align: right;
+              margin: 0px 0px 100px 0px;
+              background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwixkJ_HnavfAhVGEiwKHaldDtwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbackground%2F&psig=AOvVaw1shGMEbCXmSyoY7EDAlQvI&ust=1545286121406296");
+              background-repeat: no-repeat;
+              background-size: 100%;
+
+
+
+
+          }
+          body
+          {
+              font-family: Times New Roman;
+              background-image: url("https://mail.google.com/mail/u/0?ui=2&ik=24287e9297&attid=0.1&permmsgid=msg-f:1619539272686286382&th=1679c2634842b62e&view=att&disp=safe&realattid=f_jpjf4zb10");
+              background-repeat: no-repeat;
+              background-size: 100%;
+
+
+          }
+          h2{
+              color: #F5E663;
+              margin-top: 12px;
+              text-shadow: 1px 1px yellow;
+          }
+          #nav1{
+              display: inline-block;
+                list-style-type: none;
+              text-align: center;
+          }
+          .akchuch{
+              float: left;
+              margin-left: 100px;
+              color: white;
+          }
+          .container1{
+              float: left;
+              color: white;
+          }
+          #maindiv{
+              width: 100%;
+              height: 100%;
+              margin-left: 90px;
+              margin-right: 50px;
+              color: white;
+
+          }
+          .navbar-brand.mr-4{
+              color: #F5E663;
+              font-size: 35px;
+              text-shadow: 1px 1px yellow;
+          }
+
+
+      </style>
+      </div>
+    </main>
+    </div>
+    <div class="akchuch">
+            <a class="navbar-brand mr-4" href="{% url 'home_page' %}">Project Proposal</a>
+            <a class="navbar-brand mr-4" href="{% url 'home' %}">Result Page</a>
+            <a class="navbar-brand mr-4" href="{%  url 'home_view' %}">Prediction Form</a>
+        </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

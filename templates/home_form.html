@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'BlackFriday/my.css' %}">
+
+    <title>Data Mining</title>
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+             <a class="navbar-brand mr-4" href="{% url 'home_page' %}">Project Proposal</a>
+          <a class="navbar-brand mr-4" href="{% url 'home' %}">Result Page</a>
+            <a class="navbar-brand mr-4" href="{%  url 'home_view' %}">Prediction</a>
+        </div>
+      </nav>
+    </header>
+<div class="content-section">
+   <form method="post">
+      {% csrf_token %}
+      <fieldset class="form-group">
+
+         <legend class="border-bottom mb-4">Prediction Form, is person you entered married or not?</legend>
+         <div id="div_id_gender" class="control-group">
+            <label for="id_gender" class="control-label requiredField">Gender (Enter 0 to Male, 1 to Female)<span class="asteriskField"></span> </label>
+            <div class="controls"> <input type="number" name="gender" required="" id="id_gender" class="numberinput"> </div>
+         </div>
+         <div id="div_id_age" class="control-group">
+            <label for="id_age" class="control-label requiredField">Age<span class="asteriskField"></span> </label>
+            <div class="controls"> <input type="number" name="age" required="" id="id_age" class="numberinput"> </div>
+         </div>
+         <div id="div_id_occupation" class="control-group">
+            <label for="id_occupation" class="control-label requiredField">Occupation (from 0 to 20)<span class="asteriskField"></span> </label>
+            <div class="controls"> <input type="number" name="occupation" required="" id="id_occupation" class="numberinput"> </div>
+         </div>
+         <div id="div_id_city_category" class="control-group">
+            <label for="id_city_category" class="control-label requiredField">City category (A=0, B=1, C=2)<span class="asteriskField"></span></label>
+            <div class="controls"> <input type="number" name="city_category" required="" id="id_city_category" class="numberinput"> </div>
+         </div>
+         <div id="div_id_stay_years" class="control-group">
+            <label for="id_stay_years" class="control-label requiredField">Stay years<span class="asteriskField"></span> </label>
+            <div class="controls"> <input type="number" name="stay_years" required="" id="id_stay_years" class="numberinput"> </div>
+         </div>
+         <div id="div_id_product_id" class="control-group">
+            <label for="id_product_id" class="control-label requiredField">Product id (from 0 to 20)<span class="asteriskField"></span> </label>
+            <div class="controls"> <input type="number" name="product_id" required="" id="id_product_id" class="numberinput"> </div>
+         </div>
+         <div id="div_id_purchase" class="control-group">
+            <label for="id_purchase" class="control-label requiredField">Purchase (in soms)<span class="asteriskField"></span> </label>
+            <div class="controls"> <input type="number" name="purchase" required="" id="id_purchase" class="numberinput"> </div>
+         </div>
+      </fieldset>
+      <div class="form-group">
+         <button class="btn btn-outline-info" type="submit">Put parameters</button>
+      </div>
+   </form>
+</div>
+    <main role="main" class="container">
+      <div class="row">
+      <div class = "col-md-8">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+          {% block content %}{% endblock %}
+      </div>
+
+      </div>
+    </main>
+    <style>
+          .alert.alert-success{
+              background-color:white ;
+              color: black;
+          }
+
+          .alert.alert-info{
+              background-color:white ;
+              color: black;
+          }
+          .navbar.navbar-expand-md.navbar-dark.bg-steel.fixed-top{
+            background-color: darkblue;
+
+
+
+          }
+          nav.navbar.navbar-expand-md.navbar-dark.bg-steel.fixed-top{
+              text-align: center;
+              margin: 0px 0px 100px 0px;
+
+          }
+          .navbar.navbar-expand-md.navbar-dark.bg-steel.fixed-top{
+            {#background-color: #F5E663;#}
+              background-color: rgba(0 0 0 .8);
+          }
+          body
+          {
+              font-family: Times New Roman;
+              text-align: center;
+          }
+          h2{
+              margin-top: 100px;
+              color: aliceblue;
+          }
+        .content-section{
+            background-image: url("https://mail.google.com/mail/u/0?ui=2&ik=24287e9297&attid=0.1&permmsgid=msg-f:1619539272686286382&th=1679c2634842b62e&view=att&disp=safe&realattid=f_jpjf4zb10");
+            width: 100%;
+            height:100%
+        }
+        .border-bottom.mb-4{
+            color: #F5E663;
+        }
+        .control-label.requiredField{
+            color:white;
+        }
+        .navbar-brand.mr-4{
+              color: #F5E663;
+              font-size: 35px;
+              text-shadow: 1px 1px yellow;
+          }
+      </style>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
+{##}
+{#{% extends "home_page.html" %}#}
+{#{% load crispy_forms_tags %}#}
+{#{% block content %}#}
+{#<div class="content-section">#}
+{#   <form method="post">#}
+{#      {% csrf_token %}#}
+{#      <fieldset class="form-group">#}
+{#         <legend class="border-bottom mb-4">Prediction Form, is person you entered married or not?</legend>#}
+{#         <div id="div_id_gender" class="control-group">#}
+{#            <label for="id_gender" class="control-label requiredField">Gender (Enter 0 to Male, 1 to Female)<span class="asteriskField"></span> </label>#}
+{#            <div class="controls"> <input type="number" name="gender" required="" id="id_gender" class="numberinput"> </div>#}
+{#         </div>#}
+{#         <div id="div_id_age" class="control-group">#}
+{#            <label for="id_age" class="control-label requiredField">Age<span class="asteriskField"></span> </label>#}
+{#            <div class="controls"> <input type="number" name="age" required="" id="id_age" class="numberinput"> </div>#}
+{#         </div>#}
+{#         <div id="div_id_occupation" class="control-group">#}
+{#            <label for="id_occupation" class="control-label requiredField">Occupation (from 0 to 20)<span class="asteriskField"></span> </label>#}
+{#            <div class="controls"> <input type="number" name="occupation" required="" id="id_occupation" class="numberinput"> </div>#}
+{#         </div>#}
+{#         <div id="div_id_city_category" class="control-group">#}
+{#            <label for="id_city_category" class="control-label requiredField">City category (A=0, B=1, C=2)<span class="asteriskField"></span></label>#}
+{#            <div class="controls"> <input type="number" name="city_category" required="" id="id_city_category" class="numberinput"> </div>#}
+{#         </div>#}
+{#         <div id="div_id_stay_years" class="control-group">#}
+{#            <label for="id_stay_years" class="control-label requiredField">Stay years<span class="asteriskField"></span> </label>#}
+{#            <div class="controls"> <input type="number" name="stay_years" required="" id="id_stay_years" class="numberinput"> </div>#}
+{#         </div>#}
+{#         <div id="div_id_product_id" class="control-group">#}
+{#            <label for="id_product_id" class="control-label requiredField">Product id (from 0 to 20)<span class="asteriskField"></span> </label>#}
+{#            <div class="controls"> <input type="number" name="product_id" required="" id="id_product_id" class="numberinput"> </div>#}
+{#         </div>#}
+{#         <div id="div_id_purchase" class="control-group">#}
+{#            <label for="id_purchase" class="control-label requiredField">Purchase (in soms)<span class="asteriskField"></span> </label>#}
+{#            <div class="controls"> <input type="number" name="purchase" required="" id="id_purchase" class="numberinput"> </div>#}
+{#         </div>#}
+{#      </fieldset>#}
+{#      <div class="form-group">#}
+{#         <button class="btn btn-outline-info" type="submit">Put parameters</button>#}
+{#      </div>#}
+{#   </form>#}
+{#</div>#}
+{#{% endblock content%}#}

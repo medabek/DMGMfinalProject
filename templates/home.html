@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'BlackFriday/my.css' %}">
+
+    <title>Data Mining</title>
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+            <a class="navbar-brand mr-4" href="{% url 'home_page' %}">Project Proposal</a>
+          <a class="navbar-brand mr-4" href="{% url 'home' %}">Result Page</a>
+            <a class="navbar-brand mr-4" href="{%  url 'home_view' %}">Prediction Form</a>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container">
+<div id="gulya">
+        <h3><span>Course:</span>Data Mining</h3>
+        <h3><span>Group:</span> COM-16</h3>
+        <h3><span>Students:</span></h3>
+        <h4>Mederbek Abdyldaev</h4>
+        <h4>Gulzat Umetalieva</h4>
+        <h3><span>Teacher:</span> Azamat Kibekbaev</h3>
+        <h3><span>Dataset name: </span>BlackFriday</h3>
+
+        <h3><span>Description:</span></h3>
+    <h4><p>This data set contains 8 attributes and more than 500000 samples.  In this data set information about what product(purchase) customers (user id, gender,age,marital status,occupation,city-status,year-in-city) bought in BLACK FRIDAY. With this data set we will do classification with the help of decision tree method.</p></h4>
+        <h3><span>Used Programming language:</span></h3>
+        <h4>Python</h4>
+
+        <h3><span>Used application:</span></h3>
+        <h4>Pycharm, Django</h4>
+
+        <h3><span>Our purpose:</span></h3>
+    <h4><p>In Python make model with this data set so user can give (user id, occupation,city-status,gender,age,year-in-city,purchase)inputs and model will give prediction if the user is married or not.</p></h4>
+</div>
+    </main>
+
+    <style>
+          .alert.alert-success{
+              background-color:white ;
+              color: black;
+          }
+
+          .alert.alert-info{
+              background-color:white ;
+              color: black;
+          }
+          .navbar.navbar-expand-md.navbar-dark.bg-steel.fixed-top{
+            {#background-color: #F5E663;#}
+              background-color: rgba(0 0 0 .8);
+
+
+
+          }
+          .navbar-brand.mr-4{
+              color: #F5E663;
+              font-size: 40px;
+          }
+
+          nav.navbar.navbar-expand-md.navbar-dark.bg-steel.fixed-top{
+              text-align: right;
+
+
+
+          }
+          body
+          {
+              font-family: Times New Roman;
+              background-image: url("https://mail.google.com/mail/u/0?ui=2&ik=24287e9297&attid=0.1&permmsgid=msg-f:1619539272686286382&th=1679c2634842b62e&view=att&disp=safe&realattid=f_jpjf4zb10");
+              background-repeat: no-repeat;
+
+          }
+          h2{
+              margin-top: 100px;
+              color: aliceblue;
+          }
+        #gulya h3, #gulya h4, #gulya{
+            color: white;
+            text-shadow: 2px 2px #9C3848;
+        }
+        #gulya{
+            border-color: #F5E663;
+            border-radius: 3px;
+            border-style: solid;
+            margin-top: 100px;
+            width: 90%;
+            padding: 20px;
+        }
+
+
+
+      </style>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
