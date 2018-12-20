@@ -1,4 +1,5 @@
-# DMGMfinalProject
+# DMGMfinalProject 
+<br/>
 >>>First clone the project <br/>
 >>>Open with PyCharm <br/>
 >>>Put dataset in right location "new_sample.csv" <br/>
@@ -8,3 +9,4 @@ For example: dataset = pd.read_csv("/home/mederbek/Desktop/DM/new_sample.csv") <
 <br/>
 <br/>
 Our Report is in DMGMfinalProject <br/>
+OurReport.docx
