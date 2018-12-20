@@ -1,5 +1,5 @@
 # DMGMfinalProject
->>>First clone the project
+>>>First clone the project <br/>
 >>>Open with PyCharm
 >>>Put dataset in right location "new_sample.csv"
 in my computer it is here>>>"/home/mederbek/Desktop/DM/new_sample.csv" 
