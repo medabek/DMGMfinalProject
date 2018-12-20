@@ -1,7 +1,7 @@
 # DMGMfinalProject
 >>>First clone the project <br/>
->>>Open with PyCharm
->>>Put dataset in right location "new_sample.csv"
-in my computer it is here>>>"/home/mederbek/Desktop/DM/new_sample.csv" 
-The link shown in dataset.py file
-For example: dataset = pd.read_csv("/home/mederbek/Desktop/DM/new_sample.csv")
+>>>Open with PyCharm <br/>
+>>>Put dataset in right location "new_sample.csv" <br/>
+in my computer it is here>>>"/home/mederbek/Desktop/DM/new_sample.csv" <br/>
+The link shown in dataset.py file <br/>
+For example: dataset = pd.read_csv("/home/mederbek/Desktop/DM/new_sample.csv") <br/>
